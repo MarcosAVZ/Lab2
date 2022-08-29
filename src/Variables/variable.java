@@ -19,7 +19,7 @@ public class variable {
         System.out.println("Tu nombre es " + nombre);
         System.out.println("Tu salario deseado es " + salario);
         System.out.println("Tu edad es " + edad);
-        if(carnet == true){
+        if(carnet){
             System.out.println("Si posees carnet");
         }else {
             System.out.println("No posees carnet");
