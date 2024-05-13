@@ -1,0 +1,181 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../imagenes/fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+
+.product-container {
+    display: flex;
+    background: rgba(255, 255, 255, 0.651); /* Fondo semitransparente */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 100px;
+    margin-bottom: 20px; 
+}
+
+.product-image {
+    display: flex;
+}
+
+
+.product-image img {
+    width: 600px; /* Ancho deseado */
+    height: 500px; /* Altura deseada */
+    border-radius: 1opx;
+}
+
+.product-info {
+    flex: 2; /* Toma el doble de espacio que la imagen */
+    padding-left: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.product-info h1, .product-info .description, .product-info .price {
+    margin: 10px 0; /* Espacio vertical entre elementos */
+}
+
+.tags {
+    display: flex; /* Flexbox para las etiquetas */
+    flex-wrap: wrap; /* Permite que las etiquetas se envuelvan */
+    gap: 10px; /* Espacio entre etiquetas */
+    margin-top: 10px; /* Espacio entre la descripción/precio y las etiquetas */
+}
+
+.tags span {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px; /* Bordes redondeados para las etiquetas */
+    font-size: 14px;
+}
+
+.whatsapp-section{
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    background: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 50px auto; /* Centra el contenedor y da espacio */
+    max-width: 900px; /* Controla el ancho máximo */
+}
+
+.whatsapp-message {
+    margin-top: 30px; /* Aumenta el margen superior */
+    font-size: 16px;
+    color: #4CAF50;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    text-align: center; /* Centra el texto */
+}
+
+.whatsapp-link {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block; /* Hace que el enlace ocupe toda la línea */
+    width: 200px; /* Ajusta el ancho del botón */
+    margin: 20px auto; /* Centra el botón horizontalmente y añade margen vertical */
+    display: ruby-text;
+}
+.similar-products-container {
+    background: rgba(240, 240, 240, 0.8); /* Slightly more opacity for better visibility */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Stronger shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the container */
+    margin: 20px; /* Center the container and add vertical space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.similar-products {
+    display: flex;
+    justify-content: space-between; /* This ensures even spacing */
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.similar-product {
+    flex: 0 1 18%; /* Adjust the flex-basis to better control size */
+    margin: 10px; /* Uniform margin */
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Ensures no content spills out */
+}
+
+.similar-product img {
+    width: 100%; /* Ensure images fill the card */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any extra spacing below the image */
+}
+
+.similar-product h2 {
+    padding: 10px 5px; /* Padding for the title for spacing */
+    text-align: center; /* Center-align the title */
+    font-size: 16px; /* Uniform font size */
+    overflow: hidden; /* Prevent text from spilling over */
+    text-overflow: ellipsis; /* Add ellipsis if text is too long */
+    white-space: nowrap; /* No wrapping */
+}
+
+
+footer {
+    background-color: #FFD1DC; /* Color de fondo rosa */
+    color: #333; /* Color del texto */
+    padding: 10px 20px; /* Padding alrededor del contenido */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    border-top: 2px solid #F4AAB9; /* Borde superior */
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-logo img {
+    height: 50px; /* Ajusta esto según el tamaño deseado para tu logo */
+}
+
+.footer-links a {
+    margin: 0 10px; /* Espaciado entre íconos */
+    display: inline-block;
+}
+
+.footer-links img {
+    height: 50px; /* Ajusta según el tamaño deseado para los íconos */
+}
+
+footer p {
+    margin-left: 40px; /* Espacio desde el último elemento */
+    font-size: 0.75em; /* Tamaño más pequeño para el texto de derechos de autor */
+}

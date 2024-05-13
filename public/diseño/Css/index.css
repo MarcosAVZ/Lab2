@@ -1,0 +1,243 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Cambia 'absolute' por 'fixed' para que se mantenga visible al hacer scroll */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../imagenes/fondo.png');
+    background-size: 100% 100%; /* Esto ajusta la imagen para que cubra completamente el área disponible */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    border-radius: 8px;
+}
+h2, p {
+    margin: 5px 0;
+}
+.site-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Esto asegura que el main ocupe todo el espacio disponible */
+}
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Ajusta la alineación y el espaciado según necesites */
+    padding: 20px;
+}
+
+
+.featured-product {
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos al principio del contenedor */
+    align-items: center; /* Centra los elementos verticalmente */
+    margin: 100px;
+    padding: 20px;
+    background-color: #fff3e0b6; /* Fondo claro para destacar la sección */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.producto_destacado {
+    display: flex;
+    flex-direction: row; /* Orienta los elementos de forma horizontal */
+}
+
+.producto_destacado img {
+    max-width: 400px;
+    max-height: 400px;
+    border-radius: 10px;
+    margin-right: 150px; /* Espacio entre imagen y texto */
+}
+
+.producto-info {
+    display: flex;
+    flex-direction: column; /* Organiza los textos verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    height: 100%; /* Asegura que tome toda la altura disponible */
+}
+
+.producto-info h3, .producto-info p {
+    margin: 0; /* Elimina márgenes para un control más preciso */
+}
+
+
+/* Formulario de Búsqueda */
+.form-search {
+    background-color: #f0abab;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-input, .search-button {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.search-button {
+    background-color: #e044d9;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 30px;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #89148d;
+}
+
+/* Select2 Customization */
+.select2-container .select2-selection--multiple {
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #e4e4e4;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Productos */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.producto {
+    background: #fff;
+    margin: 10px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.producto h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+.producto p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+.pagination {
+    display: flex;
+    justify-content: center; /* Centra los elementos de la paginación horizontalmente */
+    align-items: center; /* Centra los elementos de la paginación verticalmente */
+    margin-top: 20px; /* Añade un poco de espacio arriba de la paginación */
+    margin-bottom: 20px; /* Añade espacio debajo antes del footer */
+    padding: 10px 0; /* Añade padding vertical para mejor visualización */
+    list-style-type: none; /* Elimina los bullets de la lista si es una lista ul */
+    width: 100%; /* Asegura que el div ocupe todo el ancho disponible */
+}
+
+.pagination a {
+    margin: 0 10px; /* Espaciado entre números */
+    padding: 5px 10px; /* Padding dentro de cada enlace para hacerlos más fáciles de clickear */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: black; /* Color del texto de los enlaces */
+    border: 1px solid gray; /* Borde para los enlaces */
+    border-radius: 5px; /* Bordes redondeados para los enlaces */
+}
+
+.pagination a.current, .pagination a:hover {
+    background-color: #f4a2b9; /* Fondo rosado para el enlace actual o al pasar el mouse */
+    color: white; /* Texto blanco para mejor contraste */
+}
+h2, p {
+    margin: 5px 0;
+}
+
+footer {
+    background-color: #FFD1DC; /* Color de fondo rosa */
+    color: #333; /* Color del texto */
+    padding: 10px 20px; /* Padding alrededor del contenido */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    border-top: 2px solid #F4AAB9; /* Borde superior */
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-logo img {
+    height: 50px; /* Ajusta esto según el tamaño deseado para tu logo */
+}
+
+.footer-links a {
+    margin: 0 10px; /* Espaciado entre íconos */
+    display: inline-block;
+}
+
+.footer-links img {
+    height: 50px; /* Ajusta según el tamaño deseado para los íconos */
+}
+
+footer p {
+    margin-left: 40px; /* Espacio desde el último elemento */
+    font-size: 0.75em; /* Tamaño más pequeño para el texto de derechos de autor */
+}
