@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-05-2024 a las 22:41:21
+-- Tiempo de generación: 14-05-2024 a las 23:15:25
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -69,7 +69,21 @@ INSERT INTO `etiqueta_producto` (`producto_id`, `etiqueta_id`) VALUES
 (8, 1),
 (8, 2),
 (9, 1),
-(9, 2);
+(9, 2),
+(10, 1),
+(10, 2),
+(11, 1),
+(11, 2),
+(12, 1),
+(12, 2),
+(13, 1),
+(13, 2),
+(14, 1),
+(14, 2),
+(15, 1),
+(15, 2),
+(16, 1),
+(16, 2);
 
 -- --------------------------------------------------------
 
@@ -95,7 +109,32 @@ INSERT INTO `imagenes_productos` (`id`, `producto_id`, `url_imagen`) VALUES
 (6, 6, '../uploads/6172dc1d3fc02.jpg'),
 (7, 7, '../uploads/icons8-chart-64.png'),
 (8, 8, '../uploads/PhotoMode_2023-06-06-02-09-35.png'),
-(9, 9, '../uploads/Juguete.jpeg');
+(9, 9, '../uploads/Juguete.jpeg'),
+(10, 10, '../uploads/Captura de pantalla 2024-03-13 102929.png'),
+(11, 13, '../../uploads/Logo-avanti (2).png'),
+(12, 15, '../../uploads/Logo-avanti (2).png'),
+(13, 16, '../uploads/Logo-avanti (2).png');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `personal`
+--
+
+CREATE TABLE `personal` (
+  `id` int(11) NOT NULL,
+  `Correo` varchar(255) NOT NULL,
+  `nombre_Usuario` varchar(255) NOT NULL,
+  `contraseña` varchar(255) NOT NULL,
+  `nombre` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `personal`
+--
+
+INSERT INTO `personal` (`id`, `Correo`, `nombre_Usuario`, `contraseña`, `nombre`) VALUES
+(2, 'marcosavanzaatti@gmail.com', 'Marcos123', '$2y$10$aDwXeX.sNN7U3Z5BFEqHpOxg67uBpQq41EvJDRvJ8rD4rBHQFl.By', 'Marcos Avanzatti');
 
 -- --------------------------------------------------------
 
@@ -124,7 +163,14 @@ INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `cantidad`, `f
 (6, 'Producto 6', 'The SmartChef Pro revolutionizes cooking with its state-of-the-art technology and user-friendly design, making it the perfect addition to any modern kitchen. This cutting-edge appliance seamlessly integrates with your smart home system to provide a fully automated cooking experience.\r\n\r\nFeatures and Benefits:\r\n\r\nAdvanced Temperature Control: Equipped with precision sensors, the SmartChef Pro ensures your meals are cooked perfectly every time. Whether you are simmering, boiling, or frying, it adjusts the temperature dynamically to match the recipe’s requirements.', 123.00, 12, '2024-05-13 00:39:45'),
 (7, 'Producto 7', 'The SmartChef Pro revolutionizes cooking with its state-of-the-art technology and user-friendly design, making it the perfect addition to any modern kitchen. This cutting-edge appliance seamlessly integrates with your smart home system to provide a fully automated cooking experience.\r\n\r\nFeatures and Benefits:\r\n\r\nAdvanced Temperature Control: Equipped with precision sensors, the SmartChef Pro ensures your meals are cooked perfectly every time. Whether you are simmering, boiling, or frying, it adjusts the temperature dynamically to match the recipe’s requirements.', 1231.00, 10, '2024-05-13 00:40:02'),
 (8, 'Producto 8', 'The SmartChef Pro revolutionizes cooking with its state-of-the-art technology and user-friendly design, making it the perfect addition to any modern kitchen. This cutting-edge appliance seamlessly integrates with your smart home system to provide a fully automated cooking experience.\r\n\r\nFeatures and Benefits:\r\n\r\nAdvanced Temperature Control: Equipped with precision sensors, the SmartChef Pro ensures your meals are cooked perfectly every time. Whether you are simmering, boiling, or frying, it adjusts the temperature dynamically to match the recipe’s requirements.', 12.00, 7, '2024-05-13 00:40:26'),
-(9, 'Producto 9', 'The SmartChef Pro revolutionizes cooking with its state-of-the-art technology and user-friendly design, making it the perfect addition to any modern kitchen. This cutting-edge appliance seamlessly integrates with your smart home system to provide a fully automated cooking experience.\r\n\r\nFeatures and Benefits:\r\n\r\nAdvanced Temperature Control: Equipped with precision sensors, the SmartChef Pro ensures your meals are cooked perfectly every time. Whether you are simmering, boiling, or frying, it adjusts the temperature dynamically to match the recipe’s requirements.', 11.96, 5, '2024-05-13 00:40:48');
+(9, 'Producto 9', 'The SmartChef Pro revolutionizes cooking with its state-of-the-art technology and user-friendly design, making it the perfect addition to any modern kitchen. This cutting-edge appliance seamlessly integrates with your smart home system to provide a fully automated cooking experience.\r\n\r\nFeatures and Benefits:\r\n\r\nAdvanced Temperature Control: Equipped with precision sensors, the SmartChef Pro ensures your meals are cooked perfectly every time. Whether you are simmering, boiling, or frying, it adjusts the temperature dynamically to match the recipe’s requirements.', 11.96, 5, '2024-05-13 00:40:48'),
+(10, 'Producto 10', 'adsadadasdadsa', 123.00, 12, '2024-05-13 21:38:38'),
+(11, 'Producto 11', 'adsadasdasdadsad', 12314.00, 12, '2024-05-13 21:50:18'),
+(12, 'Producto 11', 'adsadasdasdadsad', 12314.00, 12, '2024-05-13 21:50:48'),
+(13, 'Producto 11', 'dasdadsadas', 123.00, 12, '2024-05-13 21:53:42'),
+(14, 'Producto 11', '1dwadadadsdasd', 123.00, 12, '2024-05-13 21:56:13'),
+(15, 'Producto 12', 'adsadasdadsada', 1231.00, 12, '2024-05-13 21:59:25'),
+(16, 'Producto 4', '1edqdqwdqdqwd', 12.00, 1, '2024-05-13 22:02:19');
 
 --
 -- Índices para tablas volcadas
@@ -151,6 +197,13 @@ ALTER TABLE `imagenes_productos`
   ADD KEY `producto_id` (`producto_id`);
 
 --
+-- Indices de la tabla `personal`
+--
+ALTER TABLE `personal`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `nombre_Usuario` (`nombre_Usuario`);
+
+--
 -- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
@@ -170,13 +223,19 @@ ALTER TABLE `etiquetas`
 -- AUTO_INCREMENT de la tabla `imagenes_productos`
 --
 ALTER TABLE `imagenes_productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT de la tabla `personal`
+--
+ALTER TABLE `personal`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Restricciones para tablas volcadas

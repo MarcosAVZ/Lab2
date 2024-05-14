@@ -1,0 +1,37 @@
+.header-container {
+    background-color: #ffffffdc; /* Asumiendo un fondo blanco para el encabezado */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Añade sombra para un efecto elevado */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Asegura que el logo y la navegación estén en lados opuestos */
+    padding: 10px 20px; /* Añade un poco más de padding horizontal */
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.logo img {
+    height: 100px; /* Controla el tamaño del logo */
+}
+
+nav ul {
+    list-style: none; /* Elimina los bullets de la lista */
+    padding: 0;
+    display: flex; /* Alinea los elementos de la lista en una fila */
+}
+
+nav ul li {
+    margin-left: 100px; /* Espacio entre los enlaces */
+    margin-right: 100px; /* Espacio entre los enlaces */
+}
+
+nav ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #e276d9; /* Establece un color oscuro para los enlaces */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #0056b3; /* Cambia el color al hacer hover para mejor interacción */
+}
