@@ -11,6 +11,7 @@ if (isset($_POST['nombre'])) {
     // Ejecutar la consulta
     if ($stmt->execute()) {
         echo "Etiqueta agregada con éxito.";
+        echo "header("Location: administracion.php")";
     } else {
         echo "Error al agregar etiqueta: " . $conn->error;
     }

@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['logged_in'] = true;  // Se puede agregar más información de sesión si es necesario
 
             // Redirigir al usuario a una página segura
-            header("Location: ../secure_area.php");
+            header("Location: ../index.php");
             exit; // Es importante llamar a exit después de header para terminar la ejecución del script
         } else {
             echo "Usuario o contraseña incorrectos.";

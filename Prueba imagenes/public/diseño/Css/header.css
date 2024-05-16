@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between; /* Asegura que el logo y la navegación estén en lados opuestos */
-    padding: 10px 20px; /* Añade un poco más de padding horizontal */
+    padding: 10px 10px; /* Añade un poco más de padding horizontal */
     margin-left: 20px;
     margin-right: 20px;
     border-bottom-left-radius: 10px;

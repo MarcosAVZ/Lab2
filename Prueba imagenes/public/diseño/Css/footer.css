@@ -1,18 +1,12 @@
 footer {
     background-color: #FFD1DC; /* Color de fondo rosa */
     color: #333; /* Color del texto */
-    padding: 10px 20px; /* Padding alrededor del contenido */
-    display: flex;
-    align-items: center;
     justify-content: space-between; /* Distribuye el espacio entre los elementos */
     border-top: 2px solid #F4AAB9; /* Borde superior */
 }
 
 .footer-container {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 100%;
 }
 
 .footer-logo img {
@@ -25,10 +19,9 @@ footer {
 }
 
 .footer-links img {
-    height: 30px; /* Ajusta según el tamaño deseado para los íconos */
+    height: 50px; /* Ajusta según el tamaño deseado para los íconos */
 }
 
 footer p {
-    margin-left: 20px; /* Espacio desde el último elemento */
     font-size: 0.75em; /* Tamaño más pequeño para el texto de derechos de autor */
 }

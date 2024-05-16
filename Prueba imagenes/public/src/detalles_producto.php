@@ -67,10 +67,24 @@
         } else {
             echo "<p>ID de producto inválido.</p>";
         }
+        
     ?>
 </main>
-
-
+<?php 
+    if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+        echo "<div class='product-actions'>";
+             echo "<a href='javascript:void(0);' onclick='confirmDelete(" . $producto['id'] . ")' class='delete-button'>Eliminar Producto</a>";
+            echo "<a href='administrar_productos.php?id=" . $producto['id'] . "' class='edit-button'>Editar Producto</a>";
+        echo "</div>"; // Close product-actions
+    }
+?>
+<script>
+    function confirmDelete(productId) {
+        if (confirm("¿Estás seguro de que deseas eliminar este producto? Esta acción no se puede deshacer.")) {
+            window.location.href = 'funciones/eliminar_producto.php?id=' + productId;
+        }
+    }
+</script>
 <div class="whatsapp-section">
     <p>Para proceder con la compra comunicarse al WhatsApp</p>
     <?php

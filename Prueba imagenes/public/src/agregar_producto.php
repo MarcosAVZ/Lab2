@@ -36,11 +36,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $conn->close();
 
     // Redirigir al usuario a la página principal con un mensaje de éxito
-    header("Location: cargar_Productos.php?status=success");
+    header("Location: administrar_productos.php?status=success");
     exit;
 } else {
     // Redirigir al usuario a la página principal con un mensaje de error
-    header("Location: cargar_Productos.php?status=error");
+    header("Location: administrar_productos.php?status=error");
     exit;
 }
 ?>

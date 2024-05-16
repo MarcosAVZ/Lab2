@@ -4,17 +4,18 @@ html, body {
     padding: 0;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
 }
 
 body::before {
     content: "";
-    position: fixed; /* Cambia 'absolute' por 'fixed' para que se mantenga visible al hacer scroll */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-image: url('../imagenes/fondo.png');
-    background-size: 100% 100%; /* Esto ajusta la imagen para que cubra completamente el área disponible */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -207,37 +208,3 @@ h2, p {
     margin: 5px 0;
 }
 
-footer {
-    background-color: #FFD1DC; /* Color de fondo rosa */
-    color: #333; /* Color del texto */
-    padding: 10px 20px; /* Padding alrededor del contenido */
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Distribuye el espacio entre los elementos */
-    border-top: 2px solid #F4AAB9; /* Borde superior */
-}
-
-.footer-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.footer-logo img {
-    height: 50px; /* Ajusta esto según el tamaño deseado para tu logo */
-}
-
-.footer-links a {
-    margin: 0 10px; /* Espaciado entre íconos */
-    display: inline-block;
-}
-
-.footer-links img {
-    height: 50px; /* Ajusta según el tamaño deseado para los íconos */
-}
-
-footer p {
-    margin-left: 40px; /* Espacio desde el último elemento */
-    font-size: 0.75em; /* Tamaño más pequeño para el texto de derechos de autor */
-}

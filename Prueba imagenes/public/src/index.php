@@ -12,7 +12,6 @@
     <header>
         <?php include '../diseño/header.php'; ?>
     </header>
-
     <main>
         <!-- Producto destacado -->
         <div class="featured-product">
@@ -24,7 +23,9 @@
             if ($result && $result->num_rows > 0) {
                 $row = $result->fetch_assoc();
                 echo "<div class='producto_destacado'>";
-                echo "<img src='" . htmlspecialchars($row['url_imagen']) . "' alt='Producto' />";
+                echo "<a href='detalles_producto.php?id=" . $row['id'] . "'>";
+                echo "<img src='" . htmlspecialchars($row['url_imagen']) . "' alt='Producto' style='width:100%;'>";
+                echo "</a>";
                 echo "<div class='product-info'>";
                 echo "<h3>" . htmlspecialchars($row['nombre']) . "</h3>";
                 echo "<p>" . htmlspecialchars($row['descripcion']) . "</p>";
@@ -57,14 +58,12 @@ $tags = $_GET['tags'] ?? [];
 $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
 $results_per_page = 4;
 $start_from = ($page - 1) * $results_per_page;
-
 // Crear la consulta base
 $query = "SELECT p.id, p.nombre, p.descripcion, MIN(i.url_imagen) AS url_imagen 
           FROM productos p 
           LEFT JOIN imagenes_productos i ON p.id = i.producto_id ";
 $whereConditions = [];
 $params = []; // Inicializa el array de parámetros
-
 if (!empty($tags)) {
     $tagPlaceholders = implode(',', array_fill(0, count($tags), '?'));
     $whereConditions[] = "ep.etiqueta_id IN ($tagPlaceholders)";
@@ -107,8 +106,6 @@ if ($result->num_rows > 0) {
 } else {
     echo "<p>No se encontraron productos.</p>";
 }
-
-
 // Contar el total de resultados sin límite
 $count_query = "SELECT COUNT(DISTINCT p.id) AS total FROM productos p 
                 LEFT JOIN imagenes_productos i ON p.id = i.producto_id ";
@@ -132,11 +129,7 @@ for ($i = 1; $i <= $total_pages; $i++) {
 }
 echo "</div>";
 ?>
-
-
-
 </div>
-
         <script>
         $(document).ready(function() {
             $('#multi-select-tags').select2({
@@ -146,25 +139,8 @@ echo "</div>";
             });
         });
         </script>
-        <a href="cargar_Productos.php">agregar imagen</a>
-        <a href="cargar_etiqueta.php">agregar etiqueta</a>
-        <a href="inicio_sesion.php">Login</a>
-        <a href="registro_form.php">Registro</a>
     </main>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src='../diseño/imagenes/imagen_PsicoArte-removebg-preview.png' alt="Logo de PsicoArte">
-            </div>
-            <div class="footer-links">
-                <a href="mailto:tuemail@example.com"><img src="ruta/a/email-icon.png" alt="Email Icon"></a>
-                <a href="tu-url-de-instagram"><img src="ruta/a/instagram-icon.png" alt="Instagram Icon"></a>
-                <a href="tu-url-de-facebook"><img src="ruta/a/facebook-icon.png" alt="Facebook Icon"></a>
-            </div>
-            <p>&copy; 2024 PsicoArte. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    <?php include '../diseño/footer.php'; ?>
 </body>
 </html>
 

@@ -69,6 +69,34 @@ body::before {
     font-size: 14px;
 }
 
+
+.product-actions {
+    right: 20px;
+    bottom: 20px;
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    background: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 50px auto; /* Centra el contenedor y da espacio */
+    margin-top: -20px;
+    max-width: 900px; /* Controla el ancho máximo */
+}
+
+.delete-button, .edit-button {
+    background: #f44336; /* Rojo para eliminar */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.edit-button {
+    background: #4CAF50; /* Verde para editar */
+}
+
+
 .whatsapp-section{
     align-items: center; /* Alinea los elementos verticalmente en el centro */
     background: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */

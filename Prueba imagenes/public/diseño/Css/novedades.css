@@ -1,0 +1,152 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+body::before {
+    content: "";
+    position: fixed; /* Cambia 'absolute' por 'fixed' para que se mantenga visible al hacer scroll */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../imagenes/fondo.png');
+    background-size: 100% 100%; /* Esto ajusta la imagen para que cubra completamente el área disponible */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.noticia-container {
+   
+    justify-content: space-between; /* Esta propiedad asegura que los elementos se distribuyan ocupando todo el espacio disponible */
+    display: flex;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #000000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.noticia-imagen img {
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px; /* Ajusta según tus necesidades */
+    height: auto;
+    margin-right: 20px; /* Aumenta el margen para más separación si es necesario */
+}
+
+.noticia-texto {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permite que este elemento crezca para ocupar el espacio disponible */
+    padding: 10px;
+}
+
+.noticia-texto h2 {
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.noticia-texto p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.fecha-publicacion {
+    margin-right: 10px;
+    margin-top: auto; /* Empuja la fecha hacia abajo */
+    align-self: flex-end; /* Alinea la fecha hacia la derecha */
+    color: #666;
+    font-size: 12px;
+    margin-left: auto; /* Esto empujará la fecha hacia la derecha del todo */
+}
+
+.admin-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones hacia el lado derecho */
+    gap: 10px; /* Añade espacio entre los botones */
+}
+
+.edit-button, .delete-button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    display: inline-block; /* Mantiene los botones en línea y permite padding */
+    font-size: 14px; /* Ajusta al tamaño deseado */
+}
+
+.edit-button {
+    background-color: #4CAF50; /* Verde para editar */
+}
+
+.delete-button {
+    background-color: #f44336; /* Rojo para eliminar */
+}
+
+.edit-button:hover, .delete-button:hover {
+    opacity: 0.8;
+}
+
+
+
+
+footer {
+    background-color: #FFD1DC; /* Color de fondo rosa */
+    color: #333; /* Color del texto */
+    padding: 10px 20px; /* Padding alrededor del contenido */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    border-top: 2px solid #F4AAB9; /* Borde superior */
+}
+
+
+footer {
+    background-color: #FFD1DC;
+    color: #333;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #F4AAB9;
+    margin-top: auto;  /* Esta línea empuja el footer hacia abajo */
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-links img {
+    height: 50px;
+}
+
+footer p {
+    margin-left: 40px;
+    font-size: 0.75em;
+}
+
+
